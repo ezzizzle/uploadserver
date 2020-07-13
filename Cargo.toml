@@ -1,0 +1,19 @@
+[package]
+name = "uploadserver"
+version = "0.1.0"
+authors = ["Eric <ezzizzle.github@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "0.3.1"
+actix-multipart = "0.2.0"
+actix-web = "2.0.0"
+actix-rt = "1.0.0"
+async-std = "1.4.0"
+sanitize-filename = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+rand = "0.7.3"

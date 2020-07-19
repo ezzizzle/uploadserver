@@ -47,12 +47,12 @@ async fn save_file(
         }
     }
 
-    return Ok(HttpResponse::build(StatusCode::OK)
+    Ok(HttpResponse::build(StatusCode::OK)
         .content_type("application/json; charset=utf-8")
         .body(format!(
             "{{\"url\": \"{}{}\"}}",
             config.base_url, upload_path
-        )));
+        )))
 }
 
 fn index() -> HttpResponse {

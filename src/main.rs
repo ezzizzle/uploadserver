@@ -12,12 +12,12 @@ async fn save_file(
     req: HttpRequest,
     // form: Form<UploadForm>,
 ) -> Result<HttpResponse, Error> {
-    let upload_path = match req.headers().get("upload_path") {
+    let upload_path = match req.headers().get("uploadpath") {
         Some(path_value) => path_value.to_str().unwrap(),
         None => {
             return Ok(HttpResponse::build(StatusCode::BAD_REQUEST)
                 .content_type("application/json; charset=utf-8")
-                .body("{\"error\": \"No upload_path header\"}"))
+                .body("{\"error\": \"No uploadpath header\"}"))
         }
     };
 

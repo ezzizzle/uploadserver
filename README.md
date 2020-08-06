@@ -23,6 +23,6 @@ docker run --rm -ti -p 5000:5000 -e FILE_DIRECTORY=/tmp/uploader -e SERVER_PORT=
 Upload a file using a multi-part form field with a field name of `file`. You also need to set two values in the HTTP header:
 
 1. `token` - This must match the `UPLOAD_TOKEN` environment variable specified when starting the server
-2. `upload_path` - The relative path to upload the given file to
+2. `uploadpath` - The relative path to upload the given file to
     * This prepends the value of the `FILE_DIRECTORY` environment variable set on the server
-    * The `upload_path` value must include the filename (e.g. `relative/path/to/file.txt`)
+    * The `uploadpath` value must include the filename (e.g. `relative/path/to/file.txt`)
